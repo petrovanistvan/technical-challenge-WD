@@ -8,9 +8,9 @@ router.get("/phones", (req, res, next) => {
 
 // get one phone by id
 router.get('/phones/:id', function(req, res) {
-    let id = req.params.id;
+    let id = parseInt(req.params.id);
     for (let i = 0; i < phones.length; i++) {
-        if (phones[i].id == id) {
+        if (phones[i].id === id) {
             res.json(phones[i]);
         } 
     } 
