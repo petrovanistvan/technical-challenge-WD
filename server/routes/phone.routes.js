@@ -12,7 +12,9 @@ router.get('/phones/:id', function(req, res) {
     for (let i = 0; i < phones.length; i++) {
         if (phones[i].id === id) {
             res.json(phones[i]);
-        } 
+        } else {
+            res.json("no such phone")
+        }
     } 
 });
 
